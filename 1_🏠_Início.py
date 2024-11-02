@@ -6,5 +6,3 @@ st.markdown('<link rel="stylesheet" href="/styles/style.css">', unsafe_allow_htm
 # Título da Aplicação
 st.title("Calculadora de Compensação de Carbono")
 st.write("Bem-vindo à Calculadora de Compensação de Carbono. Selecione uma página no menu lateral.")
-
-
