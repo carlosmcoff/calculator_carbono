@@ -8,11 +8,9 @@ def calculoEmissaoCO2(km_distancia, potencia_motor, tipo_combustivel):
     motor2_0acima = 0.167 
 
     # Liberação de kg CO2 de cada tipo de combustivel por litro gasto
-    gasolina = 2.31
-    diesel = 2.68
-    etanol = 1.51
-    gnv = 2.21
-    glp = 1.51
+    gasolina =  2.264
+    diesel =  2.93
+    etanol = 0.389
     eletricidadeBrasil = 0.084
     eletriciaMediaGlobal = 0.475
 
@@ -42,13 +40,6 @@ def calculoEmissaoCO2(km_distancia, potencia_motor, tipo_combustivel):
 
     if combustivel == "Etanol":    
         fatorEmissao = etanol
-
-    if combustivel == "Gás Natural Veicular (GNV)":
-        fatorEmissao = gnv
-        
-    # Tipo de combustivel
-    if combustivel == "Gás Liquefeito de Petróleo (GLP)":
-        fatorEmissao = glp
 
     if combustivel == "Elétrico":
         fatorEmissao = eletricidadeBrasil
