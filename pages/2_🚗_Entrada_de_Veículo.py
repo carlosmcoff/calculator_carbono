@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 from functions.emissaoCarbono import *
 
 # Inicializa o session state se não existir

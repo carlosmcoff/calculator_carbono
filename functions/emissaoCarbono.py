@@ -22,9 +22,10 @@ def calculoEmissaoCO2(km_distancia, potencia_motor, tipo_combustivel):
     eletricidadeBrasil = 0.084
     eletriciaMediaGlobal = 0.475
 
+    # Distancia percorrida
     distancia = int(km_distancia)
-
     motor = potencia_motor
+
 
     # Motor de carro
     if motor == "1.0 a 1.2":
@@ -60,7 +61,7 @@ def calculoEmissaoCO2(km_distancia, potencia_motor, tipo_combustivel):
         consumo = caminhaoPesado * distancia
 
 
-
+    # Emissão por combustivel
     combustivel = tipo_combustivel
     
     if combustivel == "Gasolina":
@@ -81,38 +82,10 @@ def calculoEmissaoCO2(km_distancia, potencia_motor, tipo_combustivel):
 
     return roundFormula
 
-    def creditosCO2(projeto_compensacao):
-        # Projetos de compensação de carbono e seus respectivos valores em reais por kg de CO2 emitido na atmosfera
-        florestamento_Reflorestamento = 0.10
-        conservacaoFlorestas = 0.075
-        energiaRenovavel = 0.05
-        ccs = 0.40
-        melhoriasAgricolas_Manejos = 0.125
-        biocombustiveis_biomassa = 0.075
 
-        formula = co2gasto
-        projeto = projeto_compensacao
 
-        if projeto == "Florestamento e Reflorestamento":
-            compensacao = florestamento_Reflorestamento * co2gasto
-        
-        if projeto == "Conservação de Florestas (REDD+)":
-            compensacao = conservacaoFlorestas * co2gasto
-        
-        if projeto == "Energia Renovável (Eólica, Solar, Hidrelétrica)":
-            compensacao = energiaRenovavel * co2gasto
-        
-        if projeto == "Captura e Armazenamento de Carbono (CCS)":
-            compensacao = ccs * co2gasto
-        
-        if projeto == "Melhorias na Agricultura e Manejo de Solo":
-            compensacao =  melhoriasAgricolas_Manejos * co2gasto
-        
-        if projeto == "Biocombustíveis e Biomassa":
-            compensacao = biocombustiveis_biomassa = co2gasto
+    
+    
 
-        # Resultado em reais
-        roundCompensacao = round(compensacao, 2)
-    ...
     
 
