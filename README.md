@@ -53,7 +53,28 @@ Quando o usuário seleciona um veículo, insere os dados e clica no botão "Calc
 
 ---
 
-#### **3\. 3\_Histórico.py \- Histórico de Cálculos**
+#### **3\. 3\Compensação.py \- Compensação de Carbono**
+
+Este arquivo é responsável por calcular a compensação de carbono com base em emissões de veículos e diferentes métodos de compensação.
+
+##### **Explicação das Funcionalidades:**
+
+* **Função `compensação`**:  
+  * **`st.header`**: Compensação de Carbono".  
+  * **Verificação do histórico**: Se houver cálculos armazenados, separa os tipos de veículos e suas emissões em duas listas.
+  * **Selecionar um cálculo**: Cria um selectbox para selecionar um veículo e sua emissão.
+  * **Selecionar forma de compensação"**: Cria um selectbox para selecionar uma forma de compensação de carbono.
+
+
+##### **Comportamento:**
+
+Ao clicar no botão "Calcular investimento", a função: Chama a função creditosCO2 para calcular o investimento necessário.
+Exibe o título, descrição e link da forma de compensação selecionada.
+Mostra o valor necessário para o investimento.
+
+---
+
+#### **4\. 4\_Histórico.py \- Histórico de Cálculos**
 
 Este arquivo é responsável por exibir um histórico de todos os cálculos de emissões realizados durante a sessão. Ele acessa os dados armazenados no `session_state` e exibe os detalhes de cada cálculo.
 
@@ -61,8 +82,7 @@ Este arquivo é responsável por exibir um histórico de todos os cálculos de e
 
 * **Função `mostrar_relatorio`**:  
   * **`st.header`**: Define o cabeçalho "Histórico de Emissões".  
-  * **Verificação do histórico**: Se houver cálculos armazenados, a função os exibe em uma lista formatada, mostrando o tipo de veículo, potência do   
-  * motor, tipo de combustível e a emissão de CO₂ para cada cálculo.  
+  * **Verificação do histórico**: Se houver cálculos armazenados, a função os exibe em uma lista formatada, mostrando o tipo de veículo, potência do motor, tipo de combustível e a emissão de CO₂ para cada cálculo.  
   * **Botão "Limpar cálculos"**: Permite ao usuário limpar todo o histórico de cálculos, removendo os dados armazenados no `session_state`.
 
 ##### **Comportamento:**
@@ -71,7 +91,7 @@ O usuário pode revisar todos os cálculos feitos anteriormente e, se desejar, l
 
 ---
 
-#### **4\. 4\_Resultados.py \- Visualização dos Resultados (Gráficos)**
+#### **5\. 5\_Resultados.py \- Visualização dos Resultados (Gráficos)**
 
 Este arquivo cria um gráfico de barras para visualização das emissões de carbono com base nos cálculos armazenados.
 
