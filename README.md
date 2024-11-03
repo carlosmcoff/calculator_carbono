@@ -9,8 +9,9 @@ A estrutura do projeto é organizada da seguinte forma:
 `│`  
 `├── pages/`  
 `│   ├── 2_Entrada_de_Veiculo.py # Página para entrada de dados do veículo`  
-`│   ├── 3_Histórico.py          # Página para exibir o histórico de cálculos`  
-`│   ├── 4_Resultados.py         # Página para visualização dos resultados (gráficos)`  
+`│   ├── 3_Compensação.py # Página para exibição de compensação de carbono`  
+`│   ├── 4_Histórico.py # Página para exibir o histórico de cálculos`  
+`│   ├── 5_Resultados.py # Página para visualização dos resultados (gráficos)`  
 `│`  
 `└── 1_Inicio.py                 # Página inicial da aplicação`
 
