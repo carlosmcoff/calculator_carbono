@@ -33,7 +33,8 @@ def mostrar_input():
                     'tipo_veiculo': tipo_veiculo,
                     'potencia': potencia,
                     'combustivel': tipo_combustivel,
-                    'emissao': resultado
+                    'emissao': resultado,
+                    'distancia': km_percorrido
                 })
 
                 st.write(f"Emissão: {resultado} KG de CO₂")
@@ -62,7 +63,8 @@ def mostrar_input():
                     'tipo_veiculo': tipo_veiculo,
                     'potencia': potencia,
                     'combustivel': tipo_combustivel,
-                    'emissao': resultado
+                    'emissao': resultado,
+                    'distancia': km_percorrido
                 })
 
                 st.write(f"Emissão: {resultado} KG de CO₂")
@@ -91,7 +93,8 @@ def mostrar_input():
                     'tipo_veiculo': tipo_veiculo,
                     'potencia': potencia,
                     'combustivel': tipo_combustivel,
-                    'emissao': resultado
+                    'emissao': resultado,
+                    'distancia': km_percorrido
                 })
 
                 st.write(f"Emissão: {resultado} KG de CO₂")
