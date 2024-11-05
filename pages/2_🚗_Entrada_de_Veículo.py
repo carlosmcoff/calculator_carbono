@@ -26,7 +26,7 @@ def mostrar_input():
         if km_percorrido > 0:
             if st.button("Calcular", key="calcular_button"):
                 # Cálculo da emissão
-                resultado = calculoEmissaoCO2(km_percorrido, potencia, tipo_combustivel)
+                resultado = emissoesVeiculos(km_percorrido, potencia, tipo_combustivel)
                 
                 # Armazenar o resultado com informações detalhadas no session state
                 st.session_state['calculos'].append({
@@ -56,7 +56,7 @@ def mostrar_input():
         if km_percorrido > 0:
             if st.button("Calcular", key="calcular_button"):
                 # Cálculo da emissão
-                resultado = calculoEmissaoCO2(km_percorrido, potencia, tipo_combustivel)
+                resultado = emissoesVeiculos(km_percorrido, potencia, tipo_combustivel)
                 
                 # Armazenar o resultado com informações detalhadas no session state
                 st.session_state['calculos'].append({
@@ -86,7 +86,7 @@ def mostrar_input():
         if km_percorrido > 0:
             if st.button("Calcular", key="calcular_button"):
                 # Cálculo da emissão
-                resultado = calculoEmissaoCO2(km_percorrido, potencia, tipo_combustivel)
+                resultado = emissoesVeiculos(km_percorrido, potencia, tipo_combustivel)
                 
                 # Armazenar o resultado com informações detalhadas no session state
                 st.session_state['calculos'].append({
