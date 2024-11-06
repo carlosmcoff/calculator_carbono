@@ -14,7 +14,7 @@ A estrutura do projeto é organizada da seguinte forma:
 `│   ├── 2_Entrada_de_Veiculo.py    # Página para calculo de emissao de veículo`  
 `│   ├── 3_Consumo_de_Energia.py     # Página para calculo de consumo de energia`  
 `│   ├── 4_Compensação.py     # Página para calcular e exibir as compensações de carbono`  
-`│   ├── 5_Resultados.py   # Página para visualização dos dados/gráficos` 
+`│   ├── 5_Resultados.py   # Página para visualização dos dados/gráficos`                    
 `│   ├── 6_Histórico.py   # Página para vizualização dos calculos feitos` 
 `│`  
 `└── 1_Inicio.py                 # Página inicial da aplicação`
