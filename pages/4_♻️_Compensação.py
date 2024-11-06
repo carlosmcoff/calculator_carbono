@@ -1,5 +1,6 @@
 import streamlit as st
-from functions.compensacaoCarbono import *
+from data.formas_compensacao import *
+from functions.compensacao_carbono import *
 
 # Inicializa o session state se não existir
 if 'calculos' not in st.session_state:

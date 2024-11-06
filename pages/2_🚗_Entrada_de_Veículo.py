@@ -1,5 +1,5 @@
 import streamlit as st
-from functions.emissaoCarbono import *
+from functions.emissao_carbono import *
 
 # Inicializa o session state se não existir
 if 'calculos' not in st.session_state:
@@ -7,7 +7,7 @@ if 'calculos' not in st.session_state:
 
 # Função para mostrar inputs e realizar cálculos
 def mostrar_input():
-    st.header("Entrada de Veículo")
+    st.header("Entrada de Veículo 🚗")
 
     # Seleção do tipo de veículo
     tipo_veiculo = st.selectbox("Selecione o tipo de veículo:", ["Carro", "Moto", "Caminhão"], key="tipo_veiculo")

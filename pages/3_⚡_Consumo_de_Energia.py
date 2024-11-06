@@ -1,9 +1,9 @@
 import streamlit as st
-from functions.emissaoCarbono import *
+from functions.emissao_carbono import *
 
 # Inicializa o session state se não existir
-if 'calculos' not in st.session_state:
-    st.session_state['calculos'] = []  # Inicializar com lista vazia se ainda não existir
+if 'calculos_de_consumo' not in st.session_state:
+    st.session_state['calculos_de_consumo'] = []  # Inicializar com lista vazia se ainda não existir
 
 # Função para mostrar inputs e realizar cálculos
 def mostrar_input():
@@ -22,7 +22,7 @@ def mostrar_input():
                 resultado = emissoesEnergia(tipo_matriz, kwh_consumido)
                 
                 # Armazenar o resultado com informações detalhadas no session state
-                st.session_state['calculos'].append({
+                st.session_state['calculos_de_consumo'].append({
                     'matriz': tipo_matriz,
                     'consumokWh': kwh_consumido,
                     'emissao': resultado
@@ -43,7 +43,7 @@ def mostrar_input():
                 resultado = emissoesEnergia(tipo_matriz, kwh_consumido)
                 
                 # Armazenar o resultado com informações detalhadas no session state
-                st.session_state['calculos'].append({
+                st.session_state['calculos_de_consumo'].append({
                     'matriz': tipo_matriz,
                     'consumokWh': kwh_consumido,
                     'emissao': resultado
@@ -64,7 +64,7 @@ def mostrar_input():
                 resultado = emissoesEnergia(tipo_matriz, kwh_consumido)
                 
                 # Armazenar o resultado com informações detalhadas no session state
-                st.session_state['calculos'].append({
+                st.session_state['calculos_de_consumo'].append({
                     'matriz': tipo_matriz,
                     'consumokWh': kwh_consumido,
                     'emissao': resultado
@@ -85,7 +85,7 @@ def mostrar_input():
                 resultado = emissoesEnergia(tipo_matriz, kwh_consumido)
                 
                 # Armazenar o resultado com informações detalhadas no session state
-                st.session_state['calculos'].append({
+                st.session_state['calculos_de_consumo'].append({
                     'matriz': tipo_matriz,
                     'consumokWh': kwh_consumido,
                     'emissao': resultado
@@ -106,7 +106,7 @@ def mostrar_input():
                 resultado = emissoesEnergia(tipo_matriz, kwh_consumido)
                 
                 # Armazenar o resultado com informações detalhadas no session state
-                st.session_state['calculos'].append({
+                st.session_state['calculos_de_consumo'].append({
                     'matriz': tipo_matriz,
                     'consumokWh': kwh_consumido,
                     'emissao': resultado
@@ -127,7 +127,7 @@ def mostrar_input():
                 resultado = emissoesEnergia(tipo_matriz, kwh_consumido)
                 
                 # Armazenar o resultado com informações detalhadas no session state
-                st.session_state['calculos'].append({
+                st.session_state['calculos_de_consumo'].append({
                     'matriz': tipo_matriz,
                     'consumokWh': kwh_consumido,
                     'emissao': resultado
@@ -148,7 +148,7 @@ def mostrar_input():
                 resultado = emissoesEnergia(tipo_matriz, kwh_consumido)
                 
                 # Armazenar o resultado com informações detalhadas no session state
-                st.session_state['calculos'].append({
+                st.session_state['calculos_de_consumo'].append({
                     'matriz': tipo_matriz,
                     'consumokWh': kwh_consumido,
                     'emissao': resultado
@@ -169,7 +169,7 @@ def mostrar_input():
                 resultado = emissoesEnergia(tipo_matriz, kwh_consumido)
                 
                 # Armazenar o resultado com informações detalhadas no session state
-                st.session_state['calculos'].append({
+                st.session_state['calculos_de_consumo'].append({
                     'matriz': tipo_matriz,
                     'consumokWh': kwh_consumido,
                     'emissao': resultado
@@ -181,6 +181,5 @@ def mostrar_input():
         else:
             st.warning("Distância precisa ser maior que zero!")
             
-        
 
 mostrar_input()
