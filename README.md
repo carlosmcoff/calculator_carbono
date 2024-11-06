@@ -3,16 +3,19 @@
 A estrutura do projeto é organizada da seguinte forma:
 
 `CALCULATOR_RASC/`  
+`├── data/`  
+`│   └── formas_compensacao.py      # Contém dados sobre as compensações`  
 `│`  
 `├── functions/`  
 `│   └── compensacao_carbono.py      # Contém função para cálculos de compensação de carbono`  
 `│   └── emissao_carbono.py      # Contém função para cálculos de emissão de carbono`  
 `│`  
 `├── pages/`  
-`│   ├── 2_Entrada_de_Veiculo.py    # Página para entrada de dados do veículo`  
-`│   ├── 3_Compensação.py     # Página para exibição de compensação de carbono`  
-`│   ├── 4_Histórico.py     # Página para exibir o histórico de cálculos`  
-`│   ├── 5_Resultados.py   # Página para visualização dos resultados (gráficos)`  
+`│   ├── 2_Entrada_de_Veiculo.py    # Página para calculo de emissao de veículo`  
+`│   ├── 3_Consumo_de_Energia.py     # Página para calculo de consumo de energia`  
+`│   ├── 4_Compensação.py     # Página para calcular e exibir as compensações de carbono`  
+`│   ├── 5_Resultados.py   # Página para visualização dos dados/gráficos` 
+`│   ├── 6_Histórico.py   # Página para vizualização dos calculos feitos` 
 `│`  
 `└── 1_Inicio.py                 # Página inicial da aplicação`
 
