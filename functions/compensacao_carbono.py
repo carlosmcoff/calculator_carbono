@@ -6,6 +6,9 @@ def creditosCO2(projeto_compensacao, co2gasto):
     ccs = 0.40
     melhoriasAgricolas_Manejos = 0.125
     biocombustiveis_biomassa = 0.075
+    bvrio = 0.03
+    biofilica = 0.04
+    carbonext = 0.04
 
     projeto = projeto_compensacao
 
@@ -26,6 +29,15 @@ def creditosCO2(projeto_compensacao, co2gasto):
     
     if projeto == "Biocombustíveis e Biomassa":
         compensacao = biocombustiveis_biomassa * co2gasto
+
+    if projeto == "BVRio":
+        compensacao = bvrio * co2gasto
+    
+    if projeto == "Biofílica":
+        compensacao = biofilica * co2gasto
+
+    if projeto == "Carbonext":
+        compensacao = carbonext * co2gasto    
 
     # Resultado em reais
     roundCompensacao = round(compensacao, 2)

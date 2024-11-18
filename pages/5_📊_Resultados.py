@@ -1,48 +1,77 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
+# Função para atualizar e exibir o gráfico
 def atualizar_grafico():
     st.header("Análise de Dados")
     
-    # Inicializa 'calculos' em session_state, se ainda não estiver presente
+    # Inicializa 'calculos' no session_state se ainda não existir
     if 'calculos' not in st.session_state:
         st.session_state['calculos'] = []
 
     # Verifica se há cálculos armazenados
     if st.session_state['calculos']:
-        plt.clf()  # Limpa a figura para evitar sobreposição de gráficos anteriores
+        # Limpa o gráfico anterior
+        plt.clf()
 
-        # Separar tipos de veículos e suas emissões
-        tipos_de_veiculos = []
-        emissao_valores = []
-        
-        # Preenche as listas com os dados de session_state
-        for i in st.session_state['calculos']:
-            tipos_de_veiculos.append(f"{i['tipo_veiculo']} - {i['potencia']} ({i['combustivel']})")
-            emissao_valores.append(float(i['emissao']))  # Garantir que 'emissao' seja numérico
+        # Extrai os dados para o gráfico
+        tipos_de_veiculos = [
+            f"{i['tipo_veiculo']} - {i['potencia']} ({i['combustivel']})"
+            for i in st.session_state['calculos']
+        ]
+        emissao_valores = [
+            float(i['emissao']) for i in st.session_state['calculos']
+        ]
 
-        print(tipos_de_veiculos)
-        print(emissao_valores)
 
-        # Criar gráfico de barras com todos os elementos armazenados
-        fig, ax = plt.subplots(figsize=(10, 5))  # Cria um único gráfico
+        st.header("Resultados de Veículos")
+        # Cria o gráfico
+        fig, ax = plt.subplots(figsize=(10, 5))
         ax.bar(tipos_de_veiculos, emissao_valores, color='blue')
         ax.set_title('Emissões de CO₂ por Tipo de Veículo')
         ax.set_xlabel('Tipo de Veículo')
         ax.set_ylabel('Emissão de CO₂ (kg)')
-        ax.set_xticks(range(len(tipos_de_veiculos)))  # Definir o número de rótulos
-        ax.set_xticklabels(tipos_de_veiculos, rotation=45, ha='right')  # Rotacionar rótulos para facilitar a leitura
+        ax.tick_params(axis='x', rotation=45)
         plt.tight_layout()
 
-        # Renderizar gráfico no Streamlit
+        # Exibe o gráfico no Streamlit
         st.pyplot(fig)
     else:
-        st.write("Nenhum cálculo realizado até o momento.")
+        st.write("Nenhum cálculo realizado até o momento sobre veículos.")
+    
+    if st.session_state['calculos_de_consumo']:
+        # Limpa o gráfico anterior
+        plt.clf()
+
+        # Extrai os dados para o gráfico
+        tipos_de_matriz = [
+            f"{i['matriz']} - {i['consumokWh']} kWh"
+            for i in st.session_state['calculos_de_consumo']
+        ]
+        emissao_valores = [
+            float(i['emissao']) for i in st.session_state['calculos_de_consumo']
+        ]
 
 
-# Botão para limpar os cálculos (opcional para teste)
+        st.header("Resultados de Consumo Energético")
+        # Cria o gráfico
+        fig, ax = plt.subplots(figsize=(10, 5))
+        ax.bar(tipos_de_matriz, emissao_valores, color='grey')
+        ax.set_title('Emissões de CO₂ por Tipo de Matriz')
+        ax.set_xlabel('Tipo de Matriz')
+        ax.set_ylabel('Emissão de CO₂ (kg)')
+        ax.tick_params(axis='x', rotation=45)
+        plt.tight_layout()
+
+        # Exibe o gráfico no Streamlit
+        st.pyplot(fig)
+    
+    else:
+        st.write("Nenhum cálculo realizado até o momento sobre consumo de energia.")
+
+# Botão para limpar os cálculos
 if st.button("Limpar cálculos"):
     st.session_state['calculos'] = []
-
-# Chamada da função para mostrar o gráfico
+    st.session_state['calculos_de_consumo'] = []
+    
 atualizar_grafico()
