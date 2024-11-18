@@ -8,6 +8,8 @@ def atualizar_grafico():
     # Inicializa 'calculos' no session_state se ainda não existir
     if 'calculos' not in st.session_state:
         st.session_state['calculos'] = []
+    if 'calculos_de_consumo' not in st.session_state:
+        st.session_state['calculos_de_consumo'] = []
 
     # Verifica se há cálculos armazenados
     if st.session_state['calculos']:
