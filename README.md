@@ -8,6 +8,19 @@ Projeto desenvolvido para cálculo e compensação de emissões de carbono com b
 
 ## Estrutura do Projeto 📂
 
+### SUPER IMPORTANTE! ⚠️:
+É necessário instalar duas bibliotecas para a calculadora funcionar corretamente!
+
+1. **`Streamlit`**
+   Vá até seu terminal e digite o seguinte comando:
+      ``pip install streamlit``
+
+2. **`Matplotlib`**
+   Vá até seu terminal e digite o seguinte comando:
+      ``pip install matplotlib``
+
+Com as duas bibliotecas instaladas, a calculadora irá funcionar sem erros.
+
 ### Principais Arquivos e Funcionalidades:
 
 1. **`Inicio.py`**  
@@ -36,7 +49,7 @@ Projeto desenvolvido para cálculo e compensação de emissões de carbono com b
 ## Como Utilizar 🚀
 
 1. Certifique-se de ter o **Python** e **Streamlit** instalado em sua máquina.  
-3. Na pasta principal execute o comando `streamlit run 1_🏠_Início.py.py` para iniciar a aplicação.  
+2. Na pasta principal execute o comando `streamlit run 1_🏠_Início.py.py` para iniciar a aplicação.  
 
 ---
 

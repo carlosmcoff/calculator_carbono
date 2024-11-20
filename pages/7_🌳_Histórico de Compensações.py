@@ -11,7 +11,7 @@ if 'compensacao_energia' not in st.session_state:
 # Gera um historico do consumo de energia   
 def gerar_relatorio_veiculo(calculos):
     if calculos:
-        st.header("Veículos")
+        st.header("Veículos 🚗")
 
         # Criar uma tabela para exibir os cálculos
         for i, calc in enumerate(calculos, start=1):
@@ -33,7 +33,7 @@ gerar_relatorio_veiculo(st.session_state['compensacao_veiculo'])
 # Gera um historico dos veiculos e emissoes
 def gerar_relatorio_energia(calculos):
     if calculos:
-        st.header("Energia")
+        st.header("Energia 🪫")
 
         # Criar uma tabela para exibir os cálculos
         for i, calc in enumerate(calculos, start=1):
