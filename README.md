@@ -1,26 +1,3 @@
-### **Estrutura do Projeto**
-
-A estrutura do projeto é organizada da seguinte forma:
-
-`CALCULATOR_RASC/`  
-`├── data/`  
-`│   └── formas_compensacao.py      # Contém dados sobre as compensações`  
-`│`  
-`├── functions/`  
-`│   └── compensacao_carbono.py      # Contém função para cálculos de compensação de carbono`  
-`│   └── emissao_carbono.py      # Contém função para cálculos de emissão de carbono`  
-`│`  
-`├── pages/`  
-`│   ├── 2_Entrada_de_Veiculo.py    # Página para calculo de emissao de veículo`  
-`│   ├── 3_Consumo_de_Energia.py     # Página para calculo de consumo de energia`  
-`│   ├── 4_Compensação.py     # Página para calcular e exibir as compensações de carbono`  
-`│   ├── 5_Resultados.py   # Página para visualização dos dados/gráficos`                    
-`│   ├── 6_Histórico.py   # Página para vizualização dos calculos feitos` 
-`│`  
-`└── 1_Inicio.py                 # Página inicial da aplicação`
-
----
-
 ### **Arquivos e Explicações**
 
 # Calculadora de Carbono 🌱
@@ -39,11 +16,14 @@ Projeto desenvolvido para cálculo e compensação de emissões de carbono com b
 2. **`Entrada de Veiculo.py`**  
    Aba para cálculos relacionados a emissões de carbono de veículos. Solicita informações como tipo de veículo, combustível utilizado e distância percorrida, e calcula as emissões associadas.  
 
-4. **`Consumo de Energia.py`**  
+3. **`Consumo de Energia.py`**  
    Aba dedicada aos cálculos de emissões relacionadas ao consumo de energia elétrica. Solicita dados como o consumo em kWh e a matriz energética utilizada.  
 
-5. **`Compensacao.py`**  
+4. **`Compensacao.py`**  
    Aba para sugerir e calcular formas de compensação para as emissões geradas. Inclui investimentos estimados em projetos de compensação, como reflorestamento.  
+
+5. **`Resultados.py`**  
+   Aba que exibe os cálculos realizadas pelo usuário, atráves de gráficos, separadas por categorias: veículos e energia.
 
 6. **`Historico de Emissoes.py`**  
    Aba que exibe o **histórico de cálculos de emissões** realizadas pelo usuário, separadas por categorias: veículos e energia. Permite a visualização detalhada de cada cálculo e a opção de limpar o histórico armazenado no estado da aplicação.  
