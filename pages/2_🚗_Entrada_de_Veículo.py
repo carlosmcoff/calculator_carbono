@@ -7,7 +7,7 @@ if 'calculos' not in st.session_state:
 
 # Função para mostrar inputs e realizar cálculos
 def mostrar_input():
-    st.header("Entrada de Veículo 🚗")
+    st.title("Entrada de Veículo 🚗")
 
     # Seleção do tipo de veículo
     tipo_veiculo = st.selectbox("Selecione o tipo de veículo:", ["Carro", "Moto", "Caminhão"], key="tipo_veiculo")

@@ -1,15 +1,15 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
+# Inicializa 'calculos' no session_state se ainda não existir
+if 'calculos' not in st.session_state:
+    st.session_state['calculos'] = []
+if 'calculos_de_consumo' not in st.session_state:
+    st.session_state['calculos_de_consumo'] = []
+
 # Função para atualizar e exibir o gráfico
 def atualizar_grafico():
-    st.header("Análise de Dados")
-    
-    # Inicializa 'calculos' no session_state se ainda não existir
-    if 'calculos' not in st.session_state:
-        st.session_state['calculos'] = []
-    if 'calculos_de_consumo' not in st.session_state:
-        st.session_state['calculos_de_consumo'] = []
+    st.title("Análise de Dados 📊")
 
     # Verifica se há cálculos armazenados
     if st.session_state['calculos']:
@@ -39,7 +39,7 @@ def atualizar_grafico():
         # Exibe o gráfico no Streamlit
         st.pyplot(fig)
     else:
-        st.write("Nenhum cálculo realizado até o momento sobre veículos.")
+        st.write("Nenhum cálculo de veículo realizado até o momento.")
     
     if st.session_state['calculos_de_consumo']:
         # Limpa o gráfico anterior
@@ -69,11 +69,13 @@ def atualizar_grafico():
         st.pyplot(fig)
     
     else:
-        st.write("Nenhum cálculo realizado até o momento sobre consumo de energia.")
+        st.write("Nenhum cálculo de veículo realizado até o momento.")
+
+atualizar_grafico()
 
 # Botão para limpar os cálculos
-if st.button("Limpar cálculos"):
-    st.session_state['calculos'] = []
-    st.session_state['calculos_de_consumo'] = []
+if st.session_state['calculos'] or st.session_state['calculos_de_consumo']:
+    if (st.button("Limpar cálculos")):
+        st.session_state['calculos'] = []
+        st.session_state['calculos_de_consumo'] = []
     
-atualizar_grafico()

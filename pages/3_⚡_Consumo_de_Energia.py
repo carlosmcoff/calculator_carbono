@@ -7,7 +7,7 @@ if 'calculos_de_consumo' not in st.session_state:
 
 # Função para mostrar inputs e realizar cálculos
 def mostrar_input():
-    st.header("Entrada de Consumo de Energia ⚡")
+    st.title("Entrada de Consumo de Energia ⚡")
 
     # Seleção do tipo de matriz
     tipo_matriz = st.selectbox("Selecione o tipo de Matriz Energética:", ["Carvão Mineral", "Petróleo e Derivados", "Gás Natural", "Hidrelétrica", "Biomassa", "Solar", "Eólica", "Nuclear"], key="tipo_matriz")
